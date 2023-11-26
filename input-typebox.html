@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>box typing text task</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            text-align: center;
+            display: table;
+            margin: auto;
+            font-family: math;
+            text-transform: capitalize;
+            background-color: #6cf9b8;
+        }
+
+        .type-input {
+            width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .type-input input {
+            width: 400px;
+            height: 45px;
+            border: 2px solid #06ad60;
+            border-radius: 30px;
+            padding: 0px 10px;
+            font-size: 18px;
+            color: #032d1a;
+        }
+
+        .type-input input:focus-visible {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create typing inputbox</h1>
+    <div class="type-input">
+        <!-- <h2>Create typing inputbox</h2> -->
+
+        <input id="inputbox" onkeyup="text()">
+        <!-- <button onclick="text()">add</button> -->
+        <h1 id="result"></h1>
+    </div>
+
+    <script>
+        //select input box
+        var inputcontent = document.getElementById("inputbox");
+        var resulttext = document.getElementById("result");
+        function text() {
+            resulttext.textContent = inputcontent.value;
+        }
+    </script>
+
+</body>
+
+</html>
